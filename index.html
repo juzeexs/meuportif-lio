@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Vítor Pinto - Desenvolvedor Front-End</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand nav-logo" href="#inicio">juzeexs</a>
+            
+            <div class="d-flex align-items-center">
+                <div class="settings-panel d-flex align-items-center gap-2 me-3">
+                    <button id="theme-toggle" class="theme-btn"><i class="fas fa-sun"></i></button>
+                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="perfil container-fluid d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-4 text-center" data-aos="fade-right">
+                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=96759bf4d0&attid=0.1&permmsgid=msg-f:1846524739140950060&th=19a02c778977982c&view=fimg&fur=ip&permmsgid=msg-f:1846524739140950060&sz=s0-l75-ft&attbid=ANGjdJ9pxjt69tvDucg8cd98XgvGSdOxwYZ4Q5rtNbEyXYQskw4jW8AXcVlhCuKxEMC5rQ_kY5W10-HK9-7D7UDheT3WmnDFE8sYuJCZo-cr62oaEOQ4Y5S3T_EQld4&disp=emb&realattid=ii_19a02c7243a5ad385ec1&zw" class="perfil-img">
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="perfil-texto text-center mt-4 mt-lg-0">
+                        <h1 class="welcome-text">BEM-VINDO AO MEU PORTFÓLIO</h1>
+                        
+                        <div class="animated-line-container header-line mb-3 mb-lg-4">
+                            <div class="animated-line"></div>
+                        </div>
+                        
+                        <h2 class="name-text">José Vítor Pinto</h2>
+                        <p class="lead typing-container">Eu sou <span class="typing-text"></span><span class="cursor">&nbsp;</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        
+        <div class="carousel-outer-wrapper custom-card" data-aos="fade-up">
+            <section id="carousel-section">
+                <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="https://www.ikusi.com/wp-content/uploads/2025/07/post_thumbnail-4efabca9bd56b38edc0058c4ba006481.jpg" class="d-block w-100" alt="Código HTML"></div>
+                        <div class="carousel-item"><img src="https://blog.gokursos.com/wp-content/uploads/2023/05/programming-background-with-person-working-with-codes-computer-1200x800.jpg" class="d-block w-100" alt="Notebook com código"></div>
+                        <div class="carousel-item"><img src="https://storage.googleapis.com/star-lab/blog/OGs/fullstack.png" class="d-block w-100" alt="Setup de programação"></div>
+                        <div class="carousel-item"><img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop" class="d-block w-100" alt="Código JavaScript"></div>
+                    </div>
+                </div>
+            </section>
+        </div> <section id="sobre" class="custom-card p-4 mt-5" data-aos="fade-up">
+            <center><h3 class="text-center custom-card-title">
+                Sobre Mim
+                <div class="animated-line-container section-title-line mt-2">
+                    <div class="animated-line"></div>
+                </div>
+            </h3><center/>
+            <p class="text-center mt-3" style="color: var(--cor-texto-claro);">Estou começando minha jornada no mundo da programação, com foco em tecnologias web modernas. Tenho grande interesse em aprender e aplicar meus conhecimentos para construir soluções criativas e eficientes. Atualmente, estou aprimorando minhas habilidades em HTML, CSS, e JavaScript, e explorando frameworks como o React.</p>
+        </section>
+
+        <section id="habilidades" class="custom-card p-4 mt-5" data-aos="fade-up">
+            <center><h3 class="text-center custom-card-title">Habilidades<div class="animated-line-container section-title-line mt-2">
+                    <div class="animated-line"></div>
+                </div>
+            </h3><center/>
+            <div class="habilidades-container d-flex flex-wrap justify-content-center gap-4 mt-4">
+                <div class="habilidade" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5"><p>HTML5</p></div>
+                <div class="habilidade" data-aos="zoom-in" data-aos-delay="100"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3"><p>CSS3</p></div>
+                <div class="habilidade" data-aos="zoom-in" data-aos-delay="200"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript"><p>JavaScript</p></div>
+                <div class="habilidade" data-aos="zoom-in" data-aos-delay="300"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap"><p>Bootstrap</p></div>
+                <div class="habilidade" data-aos="zoom-in" data-aos-delay="400"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma"><p>Figma</p></div>
+                <div class="habilidade" data-aos="zoom-in" data-aos-delay="500"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP"><p>PHP</p></div>
+            </div>
+        </section>
+
+        <section id="projetos" class="custom-card p-4 mt-5" data-aos="fade-up">
+            <center><h3 class="text-center custom-card-title">
+                Meus Projetos
+                <div class="animated-line-container section-title-line mt-2">
+                    <div class="animated-line"></div>
+                </div>
+            </h3><center/>
+            <div class="row gy-4 mt-3">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card projeto-card h-100">
+                        <img class="lanche-img" src="https://scontent.fpet5-1.fna.fbcdn.net/v/t39.30808-6/481108364_1123362793133893_602700368240912884_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=A0e8_WnuA98Q7kNvwHq5iO5&_nc_oc=AdljfxuMgGSYU6uRIMzyPVmm60lEFupkb0TYElGglwSNkAL1eYfG8X9k3PBI00eW8Gg&_nc_zt=23&_nc_ht=scontent.fpet5-1.fna&_nc_gid=zk1E9iLVrp_J2h9pVKyBBw&oh=00_Afe7lTfaXNRcjXAnblJK0PKw5IGqeIvl5XgakIs9Q9VIvQ&oe=68F8699A" class="card-img-top" alt="Imagem do Projeto Livraria">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Livraria Elite</h4>
+                            <p class="card-text" style="color: var(--cor-texto-claro);">Um projeto de livraria online feito com HTML5, CSS3, JavaScript e Bootstrap.</p>
+                            <div class="mt-auto">
+                                <div class="projeto-links d-grid gap-2 d-sm-flex">
+                                    <a href="https://projeto-livraria.netlify.app/" target="_blank" class="btn btn-projeto flex-sm-fill">Ver ao Vivo <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/juzeexs/projeto-livraria" target="_blank" class="btn btn-projeto flex-sm-fill">Ver Código <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                     <div class="card projeto-card h-100">
+                        <img class="lanche-img" src="https://img.freepik.com/fotos-gratis/quadro-de-comida-de-rua-em-fundo-de-madeira_23-2148242555.jpg?semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Imagem do Projeto 2">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Lanches & Bebidas</h4>
+                            <p class="card-text" style="color: var(--cor-texto-claro);">Seu lanche perfeito, feito na hora, com a qualidade que você exige. Explore o cardápio, faça seu pedido e transforme seu dia em uma explosão de sabor!</p>
+                            <div class="mt-auto">
+                                <div class="projeto-links d-grid gap-2 d-sm-flex">
+                                    <a href="https://lanchesbebidas.netlify.app/" target="_blank" class="btn btn-projeto flex-sm-fill">Ver ao Vivo <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/juzeexs/restaurante" target="_blank" class="btn btn-projeto flex-sm-fill">Ver Código <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <a href="#inicio" id="scroll-to-top" class="theme-btn"><i class="fas fa-chevron-up"></i></a>
+
+    <footer id="contato" class="text-center py-4 mt-5">
+        <p style="color: var(--cor-texto-claro);">Meus contatos:</p>
+        <p>
+            <a href="mailto:jose.v.pinto8@aluno.senai.br">painpintojose@gmail.com</a> |
+            <a href="https://linkedin.com/in/juzeexs" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/juzeexs" target="_blank">GitHub</a>
+        </p>
+        <p class="mb-0" style="color: var(--cor-texto-claro);">&copy; 2025 José Vítor Pinto</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
