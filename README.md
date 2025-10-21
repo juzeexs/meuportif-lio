@@ -66,7 +66,6 @@ O cérebro das interações do portfólio.
 * **Scroll To Top (4):** Controla a exibição e o comportamento do botão `#scroll-to-top`.
 
 ---
+Link do meu Portifólio! 👇🏼
 
- Link do meu Portifólio! 👇🏼
-
-https://portfoliojuzeexs.netlify.app/
+https://meuportifoliojuzeexs.netlify.app/
