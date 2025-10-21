@@ -67,6 +67,6 @@ O cérebro das interações do portfólio.
 
 ---
 
-# Link do site do meu Portifólio
+ Link do meu Portifólio! 👇🏼
 
 https://portfoliojuzeexs.netlify.app/
