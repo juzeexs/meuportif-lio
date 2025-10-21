@@ -368,9 +368,7 @@ body.light-mode .theme-btn:hover {
     border-bottom: 3px solid var(--cor-destaque);
     transition: border-bottom-color 0.3s;
 }
-.projeto-card:hover .lanche-img {
-    border-bottom-width: 5px;
-}
+
 .card-title { 
     color: var(--cor-texto-claro); /* Título do card mais forte */
     font-weight: 600;
