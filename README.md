@@ -1,4 +1,4 @@
-# Portfólio Pessoal - José Vítor Pinto (juzeexs)
+# Portfólio Pessoal - José Vítor Pinto
 
 Este é o código-fonte do meu portfólio pessoal, desenvolvido para demonstrar minhas habilidades em desenvolvimento Front-End e apresentar meus projetos. O design é focado em modernidade, responsividade e interatividade, utilizando tecnologias web padrão e a biblioteca Bootstrap para um layout consistente.
 
