@@ -1,4 +1,5 @@
-# 🙋🏻‍♂️ Portfólio Pessoal - José Vítor Pinto
+# 🙋🏻‍♂️ Portfólio Pessoal 
+ José Vítor Pinto
 
 > Um portfólio moderno, responsivo e interativo focado em demonstrar habilidades sólidas em **Desenvolvimento Front-End** utilizando apenas **HTML, CSS e JavaScript**.
 
@@ -19,9 +20,6 @@ Este projeto foi construído com foco na experiência do usuário e na demonstra
 * **Animações:** Utilização de animações CSS nativas e efeitos de transição para maior fluidez.
 * **Efeito de Digitação:** Animação dinâmica no cabeçalho (hero) para o título principal, simulando digitação (Implementado em JavaScript).
 * **Responsividade:** Layout adaptável a diferentes tamanhos de tela, garantido pelo **Bootstrap** (abordagem *mobile-first*).
-
-### 🖼️ Screenshot (Opcional, mas recomendado)
-![Screenshot da tela inicial do Portfólio de José Vítor Pinto]([CAMINHO_PARA_O_SEU_SCREENSHOT])
 
 ---
 
@@ -47,7 +45,6 @@ Aqui estão as ferramentas utilizadas, demonstrando o domínio em tecnologias fu
 | **Estilização** | CSS3 (Variáveis CSS) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
 | **Framework CSS** | Bootstrap 5.3 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) |
 | **Lógica** | JavaScript (ES6+) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
-
 ---
 
 ## 👨‍💻 Autor
