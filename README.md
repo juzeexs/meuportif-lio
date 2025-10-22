@@ -53,7 +53,5 @@ Aqui estão as ferramentas utilizadas, demonstrando o domínio em tecnologias fu
 | :---: | :--- |
 | **Nome** | José Vítor Pinto |
 | **Foco** | Desenvolvedor Front-End |
-| **LinkedIn** | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/juzeexs/]) |
-| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/juzeexs]) |
 
 ---
