@@ -1,71 +1,91 @@
-# Portfólio Pessoal - José Vítor Pinto
+# 🧑‍💻 Portfólio Pessoal - José Vítor Pinto
 
-Este é o código-fonte do meu portfólio pessoal, desenvolvido para demonstrar minhas habilidades em desenvolvimento Front-End e apresentar meus projetos. O design é focado em modernidade, responsividade e interatividade, utilizando tecnologias web padrão e a biblioteca Bootstrap para um layout consistente.
+> Um portfólio moderno, responsivo e interativo focado em demonstrar habilidades sólidas em **Desenvolvimento Front-End**.
 
-## Visão Geral
+## 🔗 Visite o Portfólio
 
-O portfólio é estruturado em seções claras:
-* **Início:** Apresentação com efeito de digitação animada.
-* **Sobre Mim:** Descrição da minha jornada e paixão por Front-End.
-* **Habilidades:** Ícones das principais tecnologias que domino.
-* **Projetos:** Cartões interativos para visualizar e acessar o código dos projetos.
-* **Contato:** Informações e links sociais para contato.
+Confira a aplicação no ar para ver todas as funcionalidades e o design em ação:
 
-### Funcionalidades de Destaque
-* **Modo Claro/Escuro:** Alternância de tema com persistência via `localStorage`.
-* **Temas de Cores:** Possibilidade de mudar a cor de destaque (Mint, Azul, Rosa) com persistência.
-* **Animações:** Utilização da biblioteca AOS (Animate On Scroll) para transições suaves.
-* **Efeito de Digitação:** Animação no cabeçalho (hero) para o título principal.
-* **Responsividade:** Layout adaptável a diferentes tamanhos de tela (mobile-first).
+[**Acesse o Portfólio Aqui!**](https://meuportifoliojuzeexs.netlify.app/)
 
 ---
 
-## Tecnologias Utilizadas
+## ✨ Funcionalidades de Destaque
 
-| Categoria | Tecnologia |
-| :--- | :--- |
-| **Marcação** | HTML5 |
-| **Estilização** | CSS3 (com Variáveis CSS) |
-| **Framework CSS** | Bootstrap 5.3 |
-| **Lógica** | JavaScript (ES6+) |
-| **Animações** | AOS (Animate On Scroll) |
-| **Ícones** | Font Awesome 6.5.1 |
+Este projeto foi construído com foco na experiência do usuário e na demonstração de habilidades dinâmicas:
+
+* **Modo Claro/Escuro:** Alternância de tema com persistência de escolha via `localStorage`.
+* **Temas de Cores:** Possibilidade de mudar a cor de destaque (Mint, Azul, Rosa) com persistência de escolha.
+* **Animações:** Utilização da biblioteca [AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) para transições suaves entre as seções.
+* **Efeito de Digitação:** Animação dinâmica no cabeçalho (hero) para o título principal, simulando digitação.
+* **Responsividade:** Layout adaptável a diferentes tamanhos de tela (abordagem *mobile-first*).
+
+### 🖼️ Screenshot (Opcional, mas recomendado)
+![Screenshot da tela inicial do Portfólio de José Vítor Pinto]([CAMINHO_PARA_O_SEU_SCREENSHOT])
+
+---
+
+## 💡 Visão Geral e Estrutura
+
+O portfólio está organizado em seções claras e é construído a partir de três arquivos principais, cada um com responsabilidades bem definidas.
+
+| Arquivo | Função Principal | Destaques de Implementação |
+| :---: | :--- | :--- |
+| **`index.html`** | Estrutura Semântica (Marcação) | Navbar Fixa, Variáveis de Título para Animação, Estrutura de Cards. |
+| **`style.css`** | Estilização e Temas (Visual) | Variáveis CSS (`:root`) para **Modo Escuro** e **Temas de Cores** dinâmicos, Animações `@keyframes` (como `blink` e `drawLine`). |
+| **`script.js`** | Interações Dinâmicas (Lógica) | Inicialização do AOS, Lógica de Alternância de **Tema** e **Cores** (com `localStorage`), Implementação do **Efeito de Digitação** com *Typewriter*. |
 
 ---
 
-## Estrutura do Projeto
+## 🛠️ Tecnologias Utilizadas
 
-O projeto é composto por três arquivos principais:
-
-1.  `index.html`: A estrutura principal do portfólio.
-2.  `style.css`: Toda a estilização, incluindo variáveis CSS para gerenciamento de temas e cores.
-3.  `script.js`: Responsável pelas interações dinâmicas, como o efeito de digitação, a lógica de temas (claro/escuro e cores de destaque) e o botão "Scroll to Top".
-
-### 1. `index.html`
-
-Contém a estrutura semântica do portfólio. É notável a inclusão de:
-* **Navbar Fixa:** Com links de navegação, alternadores de tema (`#theme-toggle`) e cor (`#color-switcher-btn`).
-* **Variáveis de Título:** Classes como `welcome-text`, `name-text` e `typing-container` para acionar as animações de entrada e o efeito de digitação via JavaScript.
-* **Estrutura de Cards:** Utilização da classe `custom-card` e `projeto-card` para padronizar o visual das seções e projetos.
-
-### 2. `style.css`
-
-Define a identidade visual e as animações.
-* **Variáveis CSS (`:root`):** Define as cores para o modo escuro (`--cor-primaria`, `--cor-destaque`, etc.).
-* **Temas e Modo Claro:** Implementa classes como `.light-mode`, `.theme-blue`, `.theme-pink` para redefinir as variáveis CSS, permitindo a mudança de tema e cor dinamicamente.
-* **`@keyframes`:** Define animações customizadas como `blink` (cursor do efeito de digitação) e `drawLine` (animação das linhas dos títulos).
-* **Estilização de Componentes:** Estilos customizados para `navbar-custom`, `theme-btn`, `perfil-img`, `projeto-card`, entre outros.
-
-### 3. `script.js`
-
-O cérebro das interações do portfólio.
-* **AOS.init():** Inicializa a biblioteca AOS para as animações de rolagem.
-* **Alternância de Tema (1):** Gerencia o clique no `#theme-toggle`, aplicando ou removendo a classe `light-mode` e persistindo a escolha no `localStorage`.
-* **Troca de Cor (2):** Gerencia a seleção de cores de destaque, aplicando as classes `.theme-blue`, `.theme-pink` ou `.theme-mint` no `body` e persistindo no `localStorage`.
-* **Efeito de Digitação (5):** Implementa a função `startTypingEffect` para animar o texto do cabeçalho, simulando a digitação e a exclusão das frases ("Desenvolvedor Front-End.", "Web Designer.", etc.).
-* **Scroll To Top (4):** Controla a exibição e o comportamento do botão `#scroll-to-top`.
+| Categoria | Tecnologia | Badge |
+| :---: | :---: | :--- |
+| **Marcação** | HTML5 | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) |
+| **Estilização** | CSS3 (Variáveis CSS) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
+| **Framework CSS** | Bootstrap 5.3 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) |
+| **Lógica** | JavaScript (ES6+) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+| **Animações** | AOS (Animate On Scroll) | ![AOS](https://img.shields.io/badge/AOS-000000?style=for-the-badge&logo=nodedotjs&logoColor=white) |
+| **Ícones** | Font Awesome 6.5.1 | ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white) |
 
 ---
-Link do meu Portifólio! 👇🏼
 
-https://meuportifoliojuzeexs.netlify.app/
+## 🚀 Como Executar Localmente
+
+Siga os passos abaixo para testar o código em sua própria máquina.
+
+### Pré-requisitos
+* Um navegador moderno (Chrome, Firefox, Edge, etc.).
+* Um editor de código (como VS Code) com a extensão *Live Server* é recomendado.
+
+### Passo a Passo
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [LINK_DESTE_REPOSITÓRIO]
+    ```
+
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd [NOME_DO_REPOSITORIO]
+    ```
+
+3.  **Abra o arquivo:**
+    Abra o arquivo `index.html` diretamente no seu navegador ou use a opção "Open with Live Server" (se estiver usando VS Code).
+
+---
+
+## 👨‍💻 Autor
+
+| | Detalhes |
+| :---: | :--- |
+| **Nome** | José Vítor Pinto |
+| **Foco** | Desenvolvedor Front-End |
+| **LinkedIn** | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([LINK_DO_SEU_LINKEDIN]) |
+| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]([LINK_DO_SEU_GITHUB_PROFILE]) |
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença [MIT](LICENSE).
