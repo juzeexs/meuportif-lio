@@ -1,6 +1,6 @@
-# 🧑‍💻 Portfólio Pessoal - José Vítor Pinto
+# 🙋🏻‍♂️ Portfólio Pessoal - José Vítor Pinto
 
-> Um portfólio moderno, responsivo e interativo focado em demonstrar habilidades sólidas em **Desenvolvimento Front-End**.
+> Um portfólio moderno, responsivo e interativo focado em demonstrar habilidades sólidas em **Desenvolvimento Front-End** utilizando apenas **HTML, CSS e JavaScript**.
 
 ## 🔗 Visite o Portfólio
 
@@ -12,13 +12,13 @@ Confira a aplicação no ar para ver todas as funcionalidades e o design em aç�
 
 ## ✨ Funcionalidades de Destaque
 
-Este projeto foi construído com foco na experiência do usuário e na demonstração de habilidades dinâmicas:
+Este projeto foi construído com foco na experiência do usuário e na demonstração de habilidades puras de Front-End:
 
-* **Modo Claro/Escuro:** Alternância de tema com persistência de escolha via `localStorage`.
-* **Temas de Cores:** Possibilidade de mudar a cor de destaque (Mint, Azul, Rosa) com persistência de escolha.
-* **Animações:** Utilização da biblioteca [AOS](https://michalsnik.github.io/aos/) (Animate On Scroll) para transições suaves entre as seções.
-* **Efeito de Digitação:** Animação dinâmica no cabeçalho (hero) para o título principal, simulando digitação.
-* **Responsividade:** Layout adaptável a diferentes tamanhos de tela (abordagem *mobile-first*).
+* **Modo Claro/Escuro:** Alternância de tema com persistência de escolha via `localStorage` (Implementado em JavaScript).
+* **Temas de Cores:** Possibilidade de mudar a cor de destaque (Mint, Azul, Rosa) com persistência de escolha (Implementado com Variáveis CSS e JavaScript).
+* **Animações:** Utilização de animações CSS nativas e efeitos de transição para maior fluidez.
+* **Efeito de Digitação:** Animação dinâmica no cabeçalho (hero) para o título principal, simulando digitação (Implementado em JavaScript).
+* **Responsividade:** Layout adaptável a diferentes tamanhos de tela, garantido pelo **Bootstrap** (abordagem *mobile-first*).
 
 ### 🖼️ Screenshot (Opcional, mas recomendado)
 ![Screenshot da tela inicial do Portfólio de José Vítor Pinto]([CAMINHO_PARA_O_SEU_SCREENSHOT])
@@ -27,17 +27,19 @@ Este projeto foi construído com foco na experiência do usuário e na demonstra
 
 ## 💡 Visão Geral e Estrutura
 
-O portfólio está organizado em seções claras e é construído a partir de três arquivos principais, cada um com responsabilidades bem definidas.
+O portfólio é construído com ênfase na separação de responsabilidades (Marcação, Estilo e Lógica) em três arquivos principais:
 
 | Arquivo | Função Principal | Destaques de Implementação |
 | :---: | :--- | :--- |
-| **`index.html`** | Estrutura Semântica (Marcação) | Navbar Fixa, Variáveis de Título para Animação, Estrutura de Cards. |
-| **`style.css`** | Estilização e Temas (Visual) | Variáveis CSS (`:root`) para **Modo Escuro** e **Temas de Cores** dinâmicos, Animações `@keyframes` (como `blink` e `drawLine`). |
-| **`script.js`** | Interações Dinâmicas (Lógica) | Inicialização do AOS, Lógica de Alternância de **Tema** e **Cores** (com `localStorage`), Implementação do **Efeito de Digitação** com *Typewriter*. |
+| **`index.html`** | Estrutura Semântica (Marcação) | Navbar Fixa, Utilização de classes do **Bootstrap**, Estrutura de Cards. |
+| **`style.css`** | Estilização e Temas (Visual) | Variáveis CSS (`:root`) para **Modo Escuro** e **Temas de Cores** dinâmicos, Animações `@keyframes` personalizadas (como o cursor piscante). |
+| **`script.js`** | Interações Dinâmicas (Lógica) | Lógica de Alternância de **Tema** e **Cores** (com `localStorage`), Implementação do **Efeito de Digitação** para o cabeçalho. |
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
+
+Aqui estão as ferramentas utilizadas, demonstrando o domínio em tecnologias fundamentais de Front-End:
 
 | Categoria | Tecnologia | Badge |
 | :---: | :---: | :--- |
@@ -45,33 +47,6 @@ O portfólio está organizado em seções claras e é construído a partir de tr
 | **Estilização** | CSS3 (Variáveis CSS) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
 | **Framework CSS** | Bootstrap 5.3 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) |
 | **Lógica** | JavaScript (ES6+) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
-| **Animações** | AOS (Animate On Scroll) | ![AOS](https://img.shields.io/badge/AOS-000000?style=for-the-badge&logo=nodedotjs&logoColor=white) |
-| **Ícones** | Font Awesome 6.5.1 | ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white) |
-
----
-
-## 🚀 Como Executar Localmente
-
-Siga os passos abaixo para testar o código em sua própria máquina.
-
-### Pré-requisitos
-* Um navegador moderno (Chrome, Firefox, Edge, etc.).
-* Um editor de código (como VS Code) com a extensão *Live Server* é recomendado.
-
-### Passo a Passo
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone [LINK_DESTE_REPOSITÓRIO]
-    ```
-
-2.  **Acesse a pasta do projeto:**
-    ```bash
-    cd [NOME_DO_REPOSITORIO]
-    ```
-
-3.  **Abra o arquivo:**
-    Abra o arquivo `index.html` diretamente no seu navegador ou use a opção "Open with Live Server" (se estiver usando VS Code).
 
 ---
 
@@ -85,7 +60,3 @@ Siga os passos abaixo para testar o código em sua própria máquina.
 | **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]([LINK_DO_SEU_GITHUB_PROFILE]) |
 
 ---
-
-## 📝 Licença
-
-Este projeto está sob a licença [MIT](LICENSE).
