@@ -7,7 +7,7 @@
 
 Confira a aplicação no ar para ver todas as funcionalidades e o design em ação:
 
-[**Acesse o Portfólio Aqui!**](https://meuportifoliojuzeexs.netlify.app/)
+[**Acesse o Portfólio Aqui!**](https://portifoliojuzeexs.netlify.app/)
 
 ---
 
