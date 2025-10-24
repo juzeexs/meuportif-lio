@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --cor-primaria: #0e162f; /* Fundo principal (Escuro) */
-    --cor-secundaria: #172a45; /* Fundo de cards/nav (Escuro) */
-    --cor-terciaria: #112240; /* Cor para hover/sombra sutil */
-    --cor-texto: #e6f1ff; /* Texto principal claro */
-    --cor-destaque: #64ffda; /* Cor de destaque/link (Padrão: Mint) */
-    --cor-texto-claro: #8892b0; /* Texto secundário/parágrafo */
+    --cor-primaria: #0e162f;
+    --cor-secundaria: #172a45;
+    --cor-terciaria: #112240;
+    --cor-texto: #e6f1ff;
+    --cor-destaque: #64ffda;
+    --cor-texto-claro: #8892b0;
     --cor-sombra: rgba(0, 0, 0, 0.4);
     --font-family-sans-serif: 'Poppins', sans-serif;
     --navbar-bg-dark: rgba(23, 42, 69, 0.95);
     --navbar-bg-light: rgba(255, 255, 255, 0.95);
 }
 
-/* Temas de Cores de Destaque */
 body.theme-blue { --cor-destaque: #61dafb; }
 body.theme-pink { --cor-destaque: #ff70a6; }
-body.theme-mint { --cor-destaque: #64ffda; } /* Padrão original */
+body.theme-mint { --cor-destaque: #64ffda; }
 
-/* Modo Claro */
 body.light-mode {
     --cor-primaria: #f0f2f5;
     --cor-secundaria: #ffffff;
@@ -38,14 +36,9 @@ body {
     transition: background-color 0.4s, color 0.4s;
     min-height: 100vh;
     scroll-behavior: smooth;
-    /* FIX: Adiciona padding no topo para compensar o navbar fixo */
     scroll-padding-top: 75px; 
 }
 html { scroll-behavior: smooth; }
-
-/* ------------------------------------------------ */
-/* NAVBAR */
-/* ------------------------------------------------ */
 
 .navbar-custom { 
     background-color: var(--navbar-bg-dark); 
@@ -81,10 +74,6 @@ body.light-mode .navbar-custom {
 }
 .navbar-toggler:focus { box-shadow: none; }
 
-/* ------------------------------------------------ */
-/* TEMA & COR SWITCER */
-/* ------------------------------------------------ */
-
 .theme-btn { 
     background: transparent; 
     color: var(--cor-destaque); 
@@ -101,7 +90,7 @@ body.light-mode .navbar-custom {
 .theme-btn:hover { 
     background: var(--cor-destaque); 
     color: var(--cor-primaria); 
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Efeito sutil no hover */
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
 }
 body.light-mode .theme-btn:hover {
      color: var(--cor-secundaria);
@@ -145,10 +134,6 @@ body.light-mode .theme-btn:hover {
     box-shadow: 0 0 5px var(--cor-destaque);
 }
 
-/* ------------------------------------------------ */
-/* HEADER / PERFIL */
-/* ------------------------------------------------ */
-
 .perfil {
     min-height: 100vh;
     padding-top: 80px;
@@ -160,7 +145,7 @@ body.light-mode .theme-btn:hover {
     width: 270px;
     height: 270px;
     border-radius: 50%;
-    border: 4px solid var(--cor-destaque);
+    border: 6px solid var(--cor-destaque);
     object-fit: cover;
     box-shadow: 0 0 20px var(--cor-sombra);
     transition: all 0.5s ease;
@@ -182,11 +167,11 @@ body.light-mode .theme-btn:hover {
 }
 
 .perfil-texto {
-    text-align: center; /* Padrão mobile/pequeno */
+    text-align: center;
 }
 @media (min-width: 992px) {
     .perfil-texto {
-        text-align: left; /* Alinhamento à esquerda em telas grandes */
+        text-align: left;
     }
 }
 
@@ -227,14 +212,10 @@ body.light-mode .theme-btn:hover {
     50% { opacity: 0; }
 }
 
-/* ------------------------------------------------ */
-/* EFEITO LINHA ANIMADA */
-/* ------------------------------------------------ */
-
 .animated-line-container {
     height: 3px;
     width: 100%;
-    max-width: 350px; /* Largura padrão para a linha do perfil */
+    max-width: 350px;
     margin: 0 auto;
     overflow: hidden;
     text-align: left;
@@ -242,7 +223,7 @@ body.light-mode .theme-btn:hover {
 }
 @media (min-width: 992px) {
     .perfil-texto .animated-line-container {
-        margin-left: 0; /* Alinha à esquerda em desktop */
+        margin-left: 0;
     }
 }
 .animated-line {
@@ -271,10 +252,6 @@ body.light-mode .theme-btn:hover {
     display: block; 
 }
 
-/* ------------------------------------------------ */
-/* CARDS E SEÇÕES GERAIS */
-/* ------------------------------------------------ */
-
 .custom-card { 
     background-color: var(--cor-secundaria); 
     border-radius: 12px; 
@@ -287,7 +264,6 @@ body.light-mode .theme-btn:hover {
     line-height: 1.8;
 }
 
-/* CARROSSEL */
 .carousel-outer-wrapper.custom-card {
     padding: 0;
     border-radius: 12px; 
@@ -306,7 +282,7 @@ body.light-mode .theme-btn:hover {
 .carousel-item img { 
     width: 100%;
     object-fit: cover; 
-    height: 250px; /* Altura padrão para mobile */
+    height: 250px;
 }
 @media (min-width: 576px) {
     .carousel-item img { height: 350px; }
@@ -324,7 +300,69 @@ body.light-mode .theme-btn:hover {
     opacity: 1;
 }
 
-/* HABILIDADES */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background-color: var(--cor-destaque);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--cor-destaque);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 2.25rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.carousel-control-prev:hover i,
+.carousel-control-next:hover i {
+    color: var(--cor-primaria);
+}
+
+
+@keyframes pulse-right {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse-left {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-control-next i {
+    animation: pulse-right 1.5s infinite ease-in-out;
+}
+
+.carousel-control-prev i {
+    animation: pulse-left 1.5s infinite ease-in-out;
+}
+
 .habilidade { 
     text-align: center; 
     width: 100px; 
@@ -349,7 +387,6 @@ body.light-mode .theme-btn:hover {
     margin-bottom: 0;
 }
 
-/* PROJETOS */
 .projeto-card { 
     background-color: var(--cor-secundaria); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -359,18 +396,18 @@ body.light-mode .theme-btn:hover {
 }
 .projeto-card:hover { 
     transform: translateY(-8px); 
-    box-shadow: 0 8px 0px var(--cor-destaque), 0 10px 25px var(--cor-sombra); /* Sombra mais destacada */
+    box-shadow: 0 8px 0px var(--cor-destaque), 0 10px 25px var(--cor-sombra);
 }
 .lanche-img {
     width: 100%;
     object-fit: cover;
-    height: 220px; /* Altura padrão para card */
+    height: 220px;
     border-bottom: 3px solid var(--cor-destaque);
     transition: border-bottom-color 0.3s;
 }
 
 .card-title { 
-    color: var(--cor-texto-claro); /* Título do card mais forte */
+    color: var(--cor-texto-claro);
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
@@ -397,10 +434,6 @@ body.light-mode .theme-btn:hover {
     color: var(--cor-primaria) !important; 
 }
 .btn-projeto > i { margin-left: 8px; }
-
-/* ------------------------------------------------ */
-/* FOOTER & SCROLL TO TOP */
-/* ------------------------------------------------ */
 
 footer { 
     background-color: var(--cor-secundaria); 
@@ -437,7 +470,7 @@ footer a:hover {
     background-color: var(--cor-secundaria); 
     border: 2px solid var(--cor-destaque);
     box-shadow: 0 2px 10px var(--cor-sombra);
-    display: flex; /* Garante alinhamento do ícone */
+    display: flex;
 }
 
 #scroll-to-top:hover {
