@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 :root {
     --cor-primaria: #0e162f;
@@ -39,13 +40,38 @@ body {
     scroll-padding-top: 75px; 
 }
 html { scroll-behavior: smooth; }
+@keyframes sweep-gradient-right {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
 
 .navbar-custom { 
     background-color: var(--navbar-bg-dark); 
     backdrop-filter: blur(10px); 
-    border-bottom: 1px solid var(--cor-secundaria); 
-    transition: background-color 0.3s, border-bottom 0.3s; 
+    transition: background-color 0.3s; 
     box-shadow: 0 2px 5px var(--cor-sombra);
+    position: relative; 
+}
+    
+.navbar-custom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(
+        to right, 
+        var(--cor-destaque), 
+        var(--cor-sombra, #ddd), 
+        var(--cor-destaque)
+    );
+    background-size: 200% 100%;
+    animation: sweep-gradient-right 4s linear infinite;
 }
 body.light-mode .navbar-custom { 
     background-color: var(--navbar-bg-light); 
@@ -57,14 +83,35 @@ body.light-mode .navbar-custom {
     color: var(--cor-destaque) !important; 
     transition: color 0.3s ease;
 }
+
 .nav-link { 
     color: var(--cor-texto-claro) !important; 
     font-weight: 400;
     padding: 0.5rem 1rem !important;
     transition: color 0.3s ease;
+    position: relative; 
+    text-decoration: none !important; 
 }
+
 .nav-link:hover, .nav-link.active { 
     color: var(--cor-destaque) !important; 
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 8px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
 }
 .navbar-toggler { 
     border: none; 
@@ -134,6 +181,18 @@ body.light-mode .theme-btn:hover {
     box-shadow: 0 0 5px var(--cor-destaque);
 }
 
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 20px var(--cor-sombra);
+    }
+    50% {
+        box-shadow: 0 0 35px var(--cor-destaque);
+    }
+    100% {
+        box-shadow: 0 0 20px var(--cor-sombra);
+    }
+}
+
 .perfil {
     min-height: 100vh;
     padding-top: 80px;
@@ -145,13 +204,10 @@ body.light-mode .theme-btn:hover {
     width: 270px;
     height: 270px;
     border-radius: 50%;
-    border: 6px solid var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
     object-fit: cover;
-    box-shadow: 0 0 20px var(--cor-sombra);
-    transition: all 0.5s ease;
-}
-.perfil-img:hover {
-    box-shadow: 0 0 30px var(--cor-destaque);
+    animation: shadow-pulse 1.5s ease-in-out infinite;
+    
 }
 
 .welcome-text, .name-text, .typing-container {
@@ -184,6 +240,7 @@ body.light-mode .theme-btn:hover {
     margin-bottom: 0.5rem;
 }
 .perfil-texto h2 { 
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: clamp(2.8rem, 8vw, 5rem);
     color: var(--cor-texto);
@@ -264,14 +321,40 @@ body.light-mode .theme-btn:hover {
     line-height: 1.8;
 }
 
-.carousel-outer-wrapper.custom-card {
-    padding: 0;
-    border-radius: 12px; 
-    overflow: hidden;
-    margin-top: 3rem; 
-    margin-bottom: 3rem; 
-    box-shadow: 0 10px 20px var(--cor-sombra);
+@keyframes sweep-border-right {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
 }
+
+.carousel-outer-wrapper.custom-card {
+    border-radius: 3px; 
+    overflow: hidden;
+    margin-top: 3px; 
+    margin-bottom: 3px;
+    padding: 3px;
+    position: relative;
+    background-size: 200% 100%; 
+    background-image: linear-gradient(
+        to right, 
+        var(--cor-destaque), 
+        var(--cor-sombra, #ffffff),
+        var(--cor-destaque)
+    );
+
+    animation: sweep-border-right 3s linear infinite;
+}
+
+.carousel-outer-wrapper.custom-card > .carousel {
+    background-color: var(--cor-fundo, #fff); 
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+}
+
 #carousel-section {
     padding: 0 !important;
     background-color: transparent !important; 
@@ -279,6 +362,7 @@ body.light-mode .theme-btn:hover {
     border-radius: 0 !important; 
     border: none !important; 
 }
+
 .carousel-item img { 
     width: 100%;
     object-fit: cover; 
@@ -290,14 +374,21 @@ body.light-mode .theme-btn:hover {
 @media (min-width: 992px) {
     .carousel-item img { height: 500px; }
 }
+
 .carousel-indicators [data-bs-target] { 
-    background-color: var(--cor-destaque);
-    border-radius: 10px;
-    opacity: 0.6;
+    background-color: #fff; 
+    border-radius: 50%;   
+    width: 8px;           
+    height: 8px;
+    opacity: 0.5;
     transition: opacity 0.3s, background-color 0.3s;
+    border: none;        
+    margin: 0 5px;       
 }
+
 .carousel-indicators .active {
     opacity: 1;
+    background-color: var(--cor-destaque);
 }
 
 .carousel-control-prev,
@@ -305,8 +396,8 @@ body.light-mode .theme-btn:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px; 
+    width: 45px; 
+    height: 45px; 
     border-radius: 50%;
     opacity: 0.7;
     transition: all 0.3s ease;
@@ -318,11 +409,7 @@ body.light-mode .theme-btn:hover {
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     opacity: 1;
-    background-color: var(--cor-destaque);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    border: 4px solid var(--cor-destaque);
+    background-color: var(--cor-destaque); 
 }
 
 .carousel-control-prev-icon,
@@ -332,7 +419,8 @@ body.light-mode .theme-btn:hover {
 
 .carousel-control-prev i,
 .carousel-control-next i {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    color: #fff;
     transition: color 0.3s ease;
     display: inline-block;
 }
@@ -340,27 +428,6 @@ body.light-mode .theme-btn:hover {
 .carousel-control-prev:hover i,
 .carousel-control-next:hover i {
     color: var(--cor-primaria);
-}
-
-
-@keyframes pulse-right {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(6px); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes pulse-left {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-6px); }
-    100% { transform: translateX(0); }
-}
-
-.carousel-control-next i {
-    animation: pulse-right 1.5s infinite ease-in-out;
-}
-
-.carousel-control-prev i {
-    animation: pulse-left 1.5s infinite ease-in-out;
 }
 
 .habilidade { 
