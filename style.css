@@ -6,7 +6,7 @@
     --cor-secundaria: #172a45;
     --cor-terciaria: #112240;
     --cor-texto: #e6f1ff;
-    --cor-destaque: #64ffda;
+    --cor-destaque: #00b94d;
     --cor-texto-claro: #8892b0;
     --cor-sombra: rgba(0, 0, 0, 0.4);
     --font-family-sans-serif: 'Poppins', sans-serif;
@@ -14,9 +14,9 @@
     --navbar-bg-light: rgba(255, 255, 255, 0.95);
 }
 
-body.theme-blue { --cor-destaque: #61dafb; }
-body.theme-pink { --cor-destaque: #ff70a6; }
-body.theme-mint { --cor-destaque: #64ffda; }
+body.theme-blue { --cor-destaque: #007bff; }
+body.theme-pink { --cor-destaque: #dd00dd; }
+body.theme-mint { --cor-destaque: #00b94d; }
 
 body.light-mode {
     --cor-primaria: #f0f2f5;
@@ -27,8 +27,8 @@ body.light-mode {
     --cor-sombra: rgba(0, 0, 0, 0.15);
 }
 body.light-mode.theme-blue { --cor-destaque: #007bff; }
-body.light-mode.theme-pink { --cor-destaque: #e83e8c; }
-body.light-mode.theme-mint { --cor-destaque: #20c997; }
+body.light-mode.theme-pink { --cor-destaque: #dd00dd; }
+body.light-mode.theme-mint { --cor-destaque: #00b94d; }
 
 body {
     background-color: var(--cor-primaria);
@@ -463,7 +463,7 @@ body.light-mode .theme-btn:hover {
 }
 .projeto-card:hover { 
     transform: translateY(-8px); 
-    box-shadow: 0 8px 0px var(--cor-destaque), 0 10px 25px var(--cor-sombra);
+    box-shadow: 0 8px 0px var(--cor-destaque), 0 10px 25px var(--cor-destaque);
 }
 .lanche-img {
     width: 100%;
@@ -474,7 +474,7 @@ body.light-mode .theme-btn:hover {
 }
 
 .card-title { 
-    color: var(--cor-texto-claro);
+    color: var(--cor-destaque);
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
@@ -484,7 +484,7 @@ body.light-mode .theme-btn:hover {
     font-size: 0.95rem;
 }
 .projeto-tags .badge { 
-    background-color: rgb(221, 209, 240) !important; 
+    background-color: var(--cor-destaque) !important; 
     color: var(--cor-destaque); 
     padding: 0.4em 0.8em; 
     font-weight: 400;
@@ -523,7 +523,6 @@ footer a:hover {
 .social-links a:hover {
     color: var(--cor-destaque);
 }
-
 
 #scroll-to-top {
     position: fixed;
