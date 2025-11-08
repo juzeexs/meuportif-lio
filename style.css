@@ -23,6 +23,12 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
+    visibility: visible;
+}
+
+/* Previne flash de tema ao carregar */
+body.loading {
+    visibility: hidden;
 }
 
 img {
@@ -580,16 +586,7 @@ body {
     display: inline-block;
 }
 
-.hero-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 0.1em;
-    left: 0;
-    right: 0;
-    height: 0.15em;
-    background: linear-gradient(90deg, var(--color-primary), transparent);
-    opacity: 0.3;
-}
+
 
 .hero-description {
     font-size: var(--font-size-xl);
@@ -637,12 +634,13 @@ body {
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--color-primary);
-    box-shadow: 0 0 60px var(--color-primary-shadow);
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 0 50px -5px var(--color-primary-shadow); 
     animation: float 6s ease-in-out infinite, scaleIn 1s ease-out 0.5s backwards;
     position: relative;
-    z-index: 1;
+    z-index:1;
 }
+
 
 /* ===== BOTÕES ===== */
 .btn {
