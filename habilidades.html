@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Habilidades e Tecnologias - José Vítor Pinto">
+    <title>Habilidades - José Vítor Pinto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-brand">juzeexs</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="habilidades.html" class="nav-link active">Habilidades</a></li>
+                <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="icon-btn" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="icon-btn mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="section" id="habilidades" style="padding-top: 140px;">
+        <div class="container">
+            <h1 class="section-title">Minhas Habilidades</h1>
+            <p class="section-subtitle">
+                Tecnologias e ferramentas que domino para criar experiências web incríveis e funcionais.
+            </p>
+            <div class="divider"></div>
+
+            <!-- Main Skills -->
+            <div>
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 40px; text-align: left;">
+                <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <!-- HTML -->
+                    <div class="skill-card">
+                        <i class="fab fa-html5" style="font-size: 70px; color: #E34F26; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">HTML5</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Avançado - 90%</p>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt" style="font-size: 70px; color: #1572B6; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">CSS3</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Avançado - 85%</p>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skill-card">
+                        <i class="fab fa-js" style="font-size: 70px; color: #F7DF1E; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Intermediário - 75%</p>
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="skill-card">
+                        <i class="fab fa-php" style="font-size: 70px; color: #777BB4; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">PHP</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 50%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Básico - 50%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Skills -->
+            <div style="margin-top: 80px;">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 40px; text-align: left;">
+                    <i class="fas fa-tools" style="color: var(--color-primary); margin-right: 12px;"></i>
+                    Ferramentas & Conceitos
+                </h2>
+                <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <!-- Git -->
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt" style="font-size: 70px; color: #F05032; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">Git & GitHub</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Intermediário - 70%</p>
+                    </div>
+
+                    <!-- Responsive Design -->
+                    <div class="skill-card">
+                        <i class="fas fa-mobile-alt" style="font-size: 70px; color: var(--color-primary); margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">Design Responsivo</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Avançado - 85%</p>
+                    </div>
+
+                    <!-- VS Code -->
+                    <div class="skill-card">
+                        <i class="fas fa-code" style="font-size: 70px; color: #007ACC; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">VS Code</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Avançado - 80%</p>
+                    </div>
+
+                    <!-- UI/UX -->
+                    <div class="skill-card">
+                        <i class="fas fa-palette" style="font-size: 70px; color: #FF6B6B; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">UI/UX Design</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Intermediário - 65%</p>
+                    </div>
+
+                    <!-- Web Performance -->
+                    <div class="skill-card">
+                        <i class="fas fa-tachometer-alt" style="font-size: 70px; color: #4CAF50; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">Performance Web</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Intermediário - 60%</p>
+                    </div>
+
+                    <!-- SEO -->
+                    <div class="skill-card">
+                        <i class="fas fa-search" style="font-size: 70px; color: #FFA500; margin-bottom: 20px;"></i>
+                        <h3 class="skill-name">SEO Básico</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 55%;"></div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 0.875rem;">Básico - 55%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What I Can Do -->
+            <div style="margin-top: 80px;">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 40px;">
+                    O Que Posso Fazer
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                    <div class="card">
+                        <div class="contact-icon" style="margin: 0 0 20px 0;">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                            Desenvolvimento Web
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Criação de sites e aplicações web do zero usando HTML, CSS e JavaScript. Código limpo, semântico e otimizado.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="contact-icon" style="margin: 0 0 20px 0;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                            Sites Responsivos
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Desenvolvimento de interfaces que se adaptam perfeitamente a qualquer dispositivo - desktop, tablet ou mobile.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="contact-icon" style="margin: 0 0 20px 0;">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                            UI Modernas
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Criação de interfaces bonitas, modernas e intuitivas com foco na experiência do usuário.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="contact-icon" style="margin: 0 0 20px 0;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                            Interatividade
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Adiciono interatividade e animações usando JavaScript puro e bibliotecas modernas.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="contact-icon" style="margin: 0 0 20px 0;">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                            Integração PHP
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Desenvolvimento básico de funcionalidades backend usando PHP para formulários e processamento de dados.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="contact-icon" style="margin: 0 0 20px 0;">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                            Performance
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7;">
+                            Otimização de código e recursos para garantir carregamento rápido e performance excelente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Path -->
+            <div style="margin-top: 80px;">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 24px;">
+                    Estou Aprendendo
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 40px;">
+                    Tecnologias que estou estudando para expandir minhas habilidades
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+                    <div class="tag" style="padding: 12px 24px; font-size: 0.875rem;">
+                        <i class="fab fa-react" style="margin-right: 8px;"></i> React
+                    </div>
+                    <div class="tag" style="padding: 12px 24px; font-size: 0.875rem;">
+                        <i class="fab fa-node-js" style="margin-right: 8px;"></i> Node.js
+                    </div>
+                    <div class="tag" style="padding: 12px 24px; font-size: 0.875rem;">
+                        <i class="fab fa-sass" style="margin-right: 8px;"></i> Sass
+                    </div>
+                    <div class="tag" style="padding: 12px 24px; font-size: 0.875rem;">
+                        <i class="fas fa-database" style="margin-right: 8px;"></i> MySQL
+                    </div>
+                    <div class="tag" style="padding: 12px 24px; font-size: 0.875rem;">
+                        <i class="fab fa-bootstrap" style="margin-right: 8px;"></i> Bootstrap
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; margin-top: 80px;">
+                <h2 class="section-title" style="font-size: 2.25rem; margin-bottom: 24px;">
+                    Vamos criar algo juntos?
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 32px;">
+                    Estou pronto para aplicar minhas habilidades no seu próximo projeto!
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="projetos.html" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i>
+                        Ver Projetos
+                    </a>
+                    <a href="contato.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Entrar em Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">José Vítor Pinto</h3>
+                <p class="footer-description">
+                    Desenvolvedor Front-End apaixonado por criar experiências web incríveis e funcionais. Vamos construir algo incrível juntos!
+                </p>
+                <div class="social-links">
+                    <a href="https://instagram.com/juzeexs" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/juzeexs" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/juzeexs" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <p class="copyright">
+                    © 2025 José Vítor Pinto. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

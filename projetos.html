@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos - José Vítor Pinto">
+    <title>Projetos - José Vítor Pinto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-brand">juzeexs</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="habilidades.html" class="nav-link">Habilidades</a></li>
+                <li><a href="projetos.html" class="nav-link active">Projetos</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="icon-btn" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="icon-btn mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="section" style="padding-top: 140px;">
+        <div class="container">
+            <h1 class="section-title">Meus Projetos</h1>
+            <p class="section-subtitle">
+                Confira alguns dos projetos que desenvolvi aplicando minhas habilidades em HTML, CSS, JavaScript e PHP.
+            </p>
+            <div class="divider"></div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Projeto 1: Livraria Elite -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=800" alt="Livraria Elite" class="project-image">
+                    <div class="project-body">
+                        <h3 class="project-title">Livraria Elite</h3>
+                        <p class="project-description">
+                            E-commerce completo de livros com integração à API da Open Library. Sistema de carrinho, checkout com múltiplas formas de pagamento (cartão, PIX, boleto) e sistema de temas personalizáveis.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                            <span class="tag"><i class="fas fa-book"></i> API</span>
+                        </div>
+
+                        <div style="margin: 20px 0; padding: 16px; background: var(--bg-tertiary); border-radius: 8px; border-left: 3px solid var(--color-primary);">
+                            <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                                <i class="fas fa-star" style="color: var(--color-primary); margin-right: 8px;"></i>
+                                Funcionalidades Principais
+                            </h4>
+                            <ul style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.8; margin: 0; padding-left: 20px;">
+                                <li>Catálogo dinâmico integrado com Open Library API</li>
+                                <li>Busca por título, autor e gênero literário</li>
+                                <li>Sistema de carrinho de compras persistente</li>
+                                <li>Checkout com validação de formulários</li>
+                                <li>Múltiplas opções de pagamento (Cartão, PIX, Boleto)</li>
+                                <li>Sistema de temas (Vermelho, Roxo, Azul, Multicolor)</li>
+                                <li>Design responsivo e animações suaves</li>
+                                <li>Carrossel de destaques e produtos populares</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://livraria-elite.netlify.app/" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Projeto
+                            </a>
+                            <a href="https://github.com/juzeexs/Projeto-Livraria" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Lanches & Bebidas -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?q=80&w=800" alt="Lanches & Bebidas" class="project-image">
+                    <div class="project-body">
+                        <h3 class="project-title">Lanches & Bebidas</h3>
+                        <p class="project-description">
+                            Sistema web para lanchonete com cardápio interativo, carrinho de pedidos e integração de pagamento. Inclui geração de QR Code para PIX e modal de confirmação de pedidos.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                            <span class="tag"><i class="fas fa-qrcode"></i> QR Code</span>
+                        </div>
+
+                        <div style="margin: 20px 0; padding: 16px; background: var(--bg-tertiary); border-radius: 8px; border-left: 3px solid var(--color-primary);">
+                            <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">
+                                <i class="fas fa-star" style="color: var(--color-primary); margin-right: 8px;"></i>
+                                Funcionalidades Principais
+                            </h4>
+                            <ul style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.8; margin: 0; padding-left: 20px;">
+                                <li>Cardápio completo com imagens e preços</li>
+                                <li>Carrossel de imagens promocionais</li>
+                                <li>Sistema de pedidos com contador em tempo real</li>
+                                <li>Resumo detalhado do pedido com cálculo automático</li>
+                                <li>Geração de QR Code para pagamento via PIX</li>
+                                <li>Opção de pagamento em dinheiro</li>
+                                <li>Formulário de contato funcional</li>
+                                <li>Interface responsiva para mobile e desktop</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://lanchesbebidas.netlify.app" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Projeto
+                            </a>
+                            <a href="https://github.com/juzeexs/restaurante" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projetos Futuros -->
+            <div style="margin-top: 80px;">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 24px;">
+                    Em Desenvolvimento
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 40px;">
+                    Projetos que estou trabalhando no momento
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                    <div class="card" style="text-align: center;">
+                        <div class="contact-icon" style="margin: 0 auto 16px;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">
+                            Portfólio Pessoal
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                            Este projeto atual que você está vendo! Em constante evolução e melhorias.
+                        </p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <div class="contact-icon" style="margin: 0 auto 16px;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">
+                            E-commerce Completo
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                            Sistema de e-commerce com painel admin, gestão de estoque e relatórios.
+                        </p>
+                    </div>
+
+                    <div class="card" style="text-align: center;">
+                        <div class="contact-icon" style="margin: 0 auto 16px;">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">
+                            Blog Pessoal
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                            Blog sobre desenvolvimento web, tutoriais e experiências de aprendizado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; margin-top: 80px;">
+                <h2 class="section-title" style="font-size: 2.25rem; margin-bottom: 24px;">
+                    Gostou dos projetos?
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 32px;">
+                    Vamos conversar sobre como posso ajudar no seu próximo projeto!
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contato.html" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Entrar em Contato
+                    </a>
+                    <a href="sobre.html" class="btn btn-secondary">
+                        <i class="fas fa-user"></i>
+                        Conhecer Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">José Vítor Pinto</h3>
+                <p class="footer-description">
+                    Desenvolvedor Front-End apaixonado por criar experiências web incríveis e funcionais. Vamos construir algo incrível juntos!
+                </p>
+                <div class="social-links">
+                    <a href="https://instagram.com/juzeexs" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/juzeexs" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/juzeexs" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <p class="copyright">
+                    © 2025 José Vítor Pinto. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
