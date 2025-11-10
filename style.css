@@ -61,10 +61,10 @@ input, textarea, select {
 /* ===== VARIÁVEIS CSS - TEMA ESCURO ===== */
 :root {
     /* Cores Principais */
-    --color-primary: #00d9ff;
-    --color-primary-hover: #00b8d9;
-    --color-primary-light: rgba(0, 217, 255, 0.1);
-    --color-primary-shadow: rgba(0, 217, 255, 0.3);
+    --color-primary: #49a7ff;
+    --color-primary-hover: #52b2df;
+    --color-primary-light: rgba(0, 132, 255, 0.1);
+    --color-primary-shadow: rgba(0, 140, 255, 0.3);
     
     /* Cores de Fundo - Tema Escuro */
     --bg-primary: #0a0e27;
@@ -131,7 +131,7 @@ input, textarea, select {
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
     --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.7);
     --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.8);
-    --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.4);
+    --shadow-glow: 0 0 20px rgba(92, 230, 255, 0.4);
     
     /* Transições */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -370,7 +370,7 @@ body {
 }
 
 .divider {
-    width: 80px;
+    width: 140px;
     height: 4px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
     margin: 0 auto var(--space-2xl);
@@ -584,6 +584,7 @@ body {
     color: var(--color-primary);
     position: relative;
     display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -635,8 +636,8 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--color-primary);
-    box-shadow: 0 0 50px -5px var(--color-primary-shadow); 
-    animation: float 6s ease-in-out infinite, scaleIn 1s ease-out 0.5s backwards;
+    box-shadow: 0 0 50px -5px var(--color-primary-shadow);
+    animation: float 6s ease-in-out infinite, scaleIn 0s ease-out 0.4s backwards;
     position: relative;
     z-index:1;
 }
@@ -1256,7 +1257,7 @@ body {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
     border-color: var(--color-primary);
-    animation: wave 0.6s ease-in-out;
+    transition: all var(--transition-fast);
 }
 
 /* ===== ANIMAÇÕES PARA VIEWPORT ===== */
