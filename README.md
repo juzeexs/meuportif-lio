@@ -43,7 +43,6 @@ Aqui estão as ferramentas utilizadas, demonstrando o domínio em tecnologias fu
 | :---: | :---: | :--- |
 | **Marcação** | HTML5 | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) |
 | **Estilização** | CSS3 (Variáveis CSS) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
-| **Framework CSS** | Bootstrap 5.3 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) |
 | **Lógica** | JavaScript (ES6+) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
 ---
 
