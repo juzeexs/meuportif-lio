@@ -1,10 +1,3 @@
-/* ========================================
-   PORTFOLIO - CSS COMPLETO E RESPONSIVO
-   Autor: José Vítor Pinto
-   Versão: 2.0 - Com Animações
-======================================== */
-
-/* ===== RESET & NORMALIZAÇÃO ===== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -61,7 +54,7 @@ input, textarea, select {
 /* ===== VARIÁVEIS CSS - TEMA ESCURO ===== */
 :root {
     /* Cores Principais */
-    --color-primary: #49a7ff;
+    --color-primary: #35c2e6;
     --color-primary-hover: #52b2df;
     --color-primary-light: rgba(0, 132, 255, 0.1);
     --color-primary-shadow: rgba(0, 140, 255, 0.3);
@@ -350,6 +343,7 @@ body {
 /* ===== TÍTULOS E SUBTÍTULOS ===== */
 .section-title {
     font-size: var(--font-size-4xl);
+    font-family: 'Courier New', Courier, monospace;
     font-weight: var(--font-bold);
     text-align: center;
     margin-bottom: var(--space-md);
@@ -721,7 +715,8 @@ body {
 
 .stat-item {
     text-align: center;
-    padding: var(--space-2xl);
+    padding: var(--space-md);
+    height: 130px;
     background: var(--bg-secondary);
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-color);
@@ -765,8 +760,9 @@ body {
 }
 
 .stat-number {
+    padding: var(--space-sm);
     display: block;
-    font-size: var(--font-size-4xl);
+    font-size: 24px;
     font-weight: var(--font-extrabold);
     color: var(--color-primary);
     margin-bottom: var(--space-sm);
@@ -774,7 +770,7 @@ body {
 }
 
 .stat-label {
-    font-size: var(--font-size-sm);
+    font-size: 12px;
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;

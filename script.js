@@ -1,12 +1,21 @@
-// Theme Toggle
+// Theme Toggle - Inicialização corrigida
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 const themeIcon = themeToggle.querySelector('i');
 
-const currentTheme = localStorage.getItem('theme') || 'light';
+// Pega o tema salvo ou usa 'dark' como padrão
+const currentTheme = localStorage.getItem('theme') || 'dark';
+
+// Aplica o tema IMEDIATAMENTE ao carregar
+html.setAttribute('data-theme', currentTheme);
+
+// Atualiza o ícone baseado no tema atual
 if (currentTheme === 'light') {
-    html.setAttribute('data-theme', 'light');
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+} else {
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
 }
 
 themeToggle.addEventListener('click', () => {
@@ -15,9 +24,11 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', theme);
     
     if (theme === 'light') {
-        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
     } else {
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
     }
 });
 
@@ -93,6 +104,7 @@ if (skillsSection) {
     skillsObserver.observe(skillsSection);
 }
 
+// Marca a página atual no menu
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 navLinks.forEach(link => {
     link.classList.remove('active');
