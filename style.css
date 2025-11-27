@@ -11,14 +11,83 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    visibility: visible;
+@keyframes particleScroll {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
 }
 
+body {
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body::before,
+body::after {
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    opacity: 1;
+    background-color: var(--color-primary);
+    box-shadow: 
+        10vw 10vh var(--color-primary), 35vw 45vh var(--color-primary), 
+        80vw 20vh var(--color-primary), 50vw 80vh var(--color-primary),
+        5vw 90vh var(--color-primary), 90vw 15vh var(--color-primary),
+        15vw 60vh var(--color-primary), 60vw 30vh var(--color-primary),
+        25vw 25vh var(--color-primary), 75vw 75vh var(--color-primary),
+        45vw 15vh var(--color-primary), 95vw 95vh var(--color-primary),
+        10vw 110vh var(--color-primary), 35vw 145vh var(--color-primary), 
+        80vw 120vh var(--color-primary), 50vw 180vh var(--color-primary),
+        5vw 190vh var(--color-primary), 90vw 115vh var(--color-primary),
+        15vw 160vh var(--color-primary), 60vw 130vh var(--color-primary),
+        25vw 125vh var(--color-primary), 75vw 175vh var(--color-primary),
+        45vw 115vh var(--color-primary), 95vw 195vh var(--color-primary);
+    animation: particleScroll 15s linear infinite;
+}
+
+body::after {
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    opacity: 0.4;
+    background-color: var(--color-primary);
+    box-shadow: 
+        10vw 10vh var(--color-primary), 35vw 45vh var(--color-primary), 
+        80vw 20vh var(--color-primary), 50vw 80vh var(--color-primary),
+        5vw 90vh var(--color-primary), 90vw 15vh var(--color-primary),
+        15vw 60vh var(--color-primary), 60vw 30vh var(--color-primary),
+        25vw 25vh var(--color-primary), 75vw 75vh var(--color-primary),
+        45vw 15vh var(--color-primary), 95vw 95vh var(--color-primary),
+        10vw 110vh var(--color-primary), 35vw 145vh var(--color-primary), 
+        80vw 120vh var(--color-primary), 50vw 180vh var(--color-primary),
+        5vw 190vh var(--color-primary), 90vw 115vh var(--color-primary),
+        15vw 160vh var(--color-primary), 60vw 130vh var(--color-primary),
+        25vw 125vh var(--color-primary), 75vw 175vh var(--color-primary),
+        45vw 115vh var(--color-primary), 95vw 195vh var(--color-primary);
+        
+    animation: particleScroll 15s linear infinite;
+}
+
+[data-theme="light"] body::before,
+[data-theme="light"] body::after {
+    filter: none;
+    opacity: 0.7;
+}
 body.loading {
     visibility: hidden;
 }
@@ -335,7 +404,7 @@ body {
 
 .divider {
     width: 140px;
-    height: 4px;
+    height: 2px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
     margin: 0 auto var(--space-2xl);
     border-radius: var(--radius-full);
@@ -394,15 +463,15 @@ body {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #ff0000;
     animation: mudarCor 5s infinite alternate;
 }
 
 @keyframes mudarCor {
-    0% { background-color: #e7e7e7;  }
-    50% { background-color: #00ccff; }
-    100% { background-color: #0077ff; }
+    50% { background-color: #24d3ff;  }
+    100% { background-color: #0026ff; }
 }
+
+
 
 .nav {
     display: flex;
@@ -1144,7 +1213,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1.5px;
+    height: 1px;
     background: linear-gradient(
         90deg, 
         #00ccff, #002bff, #f2e5ff, #002bff, #00ccff
