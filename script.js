@@ -1,15 +1,10 @@
-// Theme Toggle - Inicialização corrigida
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 const themeIcon = themeToggle.querySelector('i');
 
-// Pega o tema salvo ou usa 'dark' como padrão
 const currentTheme = localStorage.getItem('theme') || 'dark';
 
-// Aplica o tema IMEDIATAMENTE ao carregar
 html.setAttribute('data-theme', currentTheme);
-
-// Atualiza o ícone baseado no tema atual
 if (currentTheme === 'light') {
     themeIcon.classList.remove('fa-sun');
     themeIcon.classList.add('fa-moon');
@@ -32,7 +27,6 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Mobile Menu Toggle
 const mobileToggle = document.getElementById('mobileToggle');
 const navMenu = document.getElementById('navMenu');
 const menuIcon = mobileToggle.querySelector('i');
@@ -43,7 +37,6 @@ mobileToggle.addEventListener('click', () => {
     menuIcon.classList.toggle('fa-times');
 });
 
-// Close mobile menu on link click
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -53,7 +46,6 @@ navLinks.forEach(link => {
     });
 });
 
-// Scroll to top button
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
@@ -68,7 +60,6 @@ scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Contact form submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -82,7 +73,6 @@ if (contactForm) {
     });
 }
 
-// Skill progress animation on scroll
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
@@ -104,7 +94,6 @@ if (skillsSection) {
     skillsObserver.observe(skillsSection);
 }
 
-// Marca a página atual no menu
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 navLinks.forEach(link => {
     link.classList.remove('active');
