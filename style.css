@@ -16,6 +16,15 @@ html {
     to { transform: translateY(-2000px); }
 }
 
+@keyframes particleScroll {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
 body {
     font-size: var(--font-size-base);
     color: var(--text-primary);
@@ -23,6 +32,7 @@ body {
     min-height: 100vh;
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
@@ -38,34 +48,32 @@ body::after {
     z-index: -1;
 }
 
-body::before {
-    width: 4px;
-    height: 4px;
-    border-radius: 50px;
-    opacity: 1;
-    background-color: var(--color-primary);
-    box-shadow: 
-        10vw 10vh var(--color-primary), 35vw 45vh var(--color-primary), 
-        80vw 20vh var(--color-primary), 50vw 80vh var(--color-primary),
-        5vw 90vh var(--color-primary), 90vw 15vh var(--color-primary),
-        15vw 60vh var(--color-primary), 60vw 30vh var(--color-primary),
-        25vw 25vh var(--color-primary), 75vw 75vh var(--color-primary),
-        45vw 15vh var(--color-primary), 95vw 95vh var(--color-primary),
-        10vw 110vh var(--color-primary), 35vw 145vh var(--color-primary), 
-        80vw 120vh var(--color-primary), 50vw 180vh var(--color-primary),
-        5vw 190vh var(--color-primary), 90vw 115vh var(--color-primary),
-        15vw 160vh var(--color-primary), 60vw 130vh var(--color-primary),
-        25vw 125vh var(--color-primary), 75vw 175vh var(--color-primary),
-        45vw 115vh var(--color-primary), 95vw 195vh var(--color-primary);
-    animation: particleScroll 15s linear infinite;
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }
 
+::view-transition-new(root) {
+    z-index: 9999;
+}
+
+body, 
+body::before, 
 body::after {
-    width: 4px;
-    height: 4px;
-    border-radius: 50px;
-    opacity: 0.4;
-    background-color: var(--color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fa-sun, .fa-moon {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+body::before {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; 
+    opacity: 1;
+    background-color: transparent; 
     box-shadow: 
         10vw 10vh var(--color-primary), 35vw 45vh var(--color-primary), 
         80vw 20vh var(--color-primary), 50vw 80vh var(--color-primary),
@@ -80,7 +88,31 @@ body::after {
         25vw 125vh var(--color-primary), 75vw 175vh var(--color-primary),
         45vw 115vh var(--color-primary), 95vw 195vh var(--color-primary);
         
-    animation: particleScroll 15s linear infinite;
+    animation: particleScroll 10s linear infinite;
+}
+
+body::after {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 1; 
+    background-color: transparent;
+    
+    box-shadow: 
+        10vw 10vh var(--color-primary), 35vw 45vh var(--color-primary), 
+        80vw 20vh var(--color-primary), 50vw 80vh var(--color-primary),
+        5vw 90vh var(--color-primary), 90vw 15vh var(--color-primary),
+        15vw 60vh var(--color-primary), 60vw 30vh var(--color-primary),
+        25vw 25vh var(--color-primary), 75vw 75vh var(--color-primary),
+        45vw 15vh var(--color-primary), 95vw 95vh var(--color-primary),
+        10vw 110vh var(--color-primary), 35vw 145vh var(--color-primary), 
+        80vw 120vh var(--color-primary), 50vw 180vh var(--color-primary),
+        5vw 190vh var(--color-primary), 90vw 115vh var(--color-primary),
+        15vw 160vh var(--color-primary), 60vw 130vh var(--color-primary),
+        25vw 125vh var(--color-primary), 75vw 175vh var(--color-primary),
+        45vw 115vh var(--color-primary), 95vw 195vh var(--color-primary);
+        
+    animation: particleScroll 20s linear infinite;
 }
 
 [data-theme="light"] body::before,
@@ -88,10 +120,10 @@ body::after {
     filter: none;
     opacity: 0.7;
 }
+
 body.loading {
     visibility: hidden;
 }
-
 img {
     max-width: 100%;
     height: auto;
@@ -191,7 +223,7 @@ input, textarea, select {
 }
 
 [data-theme="light"] {
-    --bg-primary: #ffffff;
+    --bg-primary: #fffffff6;
     --bg-secondary: #ffffff;
     --bg-tertiary: #e9ecef;
     --bg-card: #ffffff;
@@ -607,7 +639,8 @@ body {
 }
 
 .hero-label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: var(--font-size-sm);
     font-weight: var(--font-semibold);
     color: var(--color-primary);
@@ -618,7 +651,44 @@ body {
     background: var(--color-primary-light);
     border-radius: var(--radius-full);
     border: 1px solid rgba(0, 217, 255, 0.2);
-    animation: glowPulse 2s ease-in-out infinite, fadeInDown 0.8s ease-out backwards;
+    animation: glowPulse 2s ease-in-out infinite; 
+    min-height: 2em; 
+    box-sizing: border-box;
+}
+
+.typing-text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--color-primary);
+    width: 0;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    animation: 
+    type-delete 6s steps(24) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes type-delete {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100%; 
+    }
+    60% {
+        width: 100%; 
+    }
+    90% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--color-primary); }
 }
 
 .hero-title {
@@ -630,10 +700,30 @@ body {
 }
 
 .hero-highlight {
-    color: var(--color-primary);
     position: relative;
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(
+        60deg,
+        var(--color-primary) 30%,
+        rgb(255, 255, 255) 50%,
+        var(--color-primary) 70%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shineMove 5.5s linear infinite;
+}
+
+@keyframes shineMove {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
 }
 
 .hero-description {
@@ -682,7 +772,7 @@ body {
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--color-primary);
+    border: 2px solid var(--color-primary);
     box-shadow: 0 0 50px -5px var(--color-primary-shadow);
     animation: float 6s ease-in-out infinite, scaleIn 0s ease-out 0.4s backwards;
     position: relative;
