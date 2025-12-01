@@ -223,7 +223,7 @@ input, textarea, select {
 }
 
 [data-theme="light"] {
-    --bg-primary: #fffffff6;
+    --bg-primary: #ffffff;
     --bg-secondary: #ffffff;
     --bg-tertiary: #e9ecef;
     --bg-card: #ffffff;
@@ -500,7 +500,7 @@ body {
 
 @keyframes mudarCor {
     50% { background-color: #24d3ff;  }
-    100% { background-color: #0026ff; }
+    100% { background-color: #00f7ff; }
 }
 
 
@@ -772,12 +772,157 @@ body {
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--color-primary);
-    box-shadow: 0 0 50px -5px var(--color-primary-shadow);
-    animation: float 6s ease-in-out infinite, scaleIn 0s ease-out 0.4s backwards;
+    border: 2px solid var(--color-primary); 
     position: relative;
-    z-index:1;
+    z-index: 1;
+    animation: 
+    slideInSide 1s ease-out forwards,
+    float 6s ease-in-out infinite 1s,
+    rgbCycle 3s linear infinite; 
 }
+
+@keyframes rgbCycle {
+    0% {
+        border-color: #ff0000; 
+        box-shadow: 0 0 50px -5px rgba(255, 0, 0, 0.6);
+    }
+    16% {
+        border-color: #ffff00; 
+        box-shadow: 0 0 50px -5px rgba(255, 255, 0, 0.6);
+    }
+    33% {
+        border-color: #00ff00; 
+        box-shadow: 0 0 50px -5px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        border-color: #00ffff;
+        box-shadow: 0 0 50px -5px rgba(0, 255, 255, 0.6);
+    }
+    66% {
+        border-color: #0000ff;
+        box-shadow: 0 0 50px -5px rgba(0, 0, 255, 0.6);
+    }
+    83% {
+        border-color: #ff00ff;
+        box-shadow: 0 0 50px -5px rgba(255, 0, 255, 0.6);
+    }
+    100% {
+        border-color: #ff0000;
+        box-shadow: 0 0 50px -5px rgba(255, 0, 0, 0.6);
+    }
+}
+
+@keyframes slideInSide {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.profile-carousel-frame {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary); 
+    box-shadow: 0 0 50px -5px var(--color-primary-shadow);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    animation: 
+    slideInSide 1s ease-out forwards,      
+    float 6s ease-in-out infinite 1s,      
+    rgbCycle 3s linear infinite;           
+}
+
+@keyframes rgbCycle {
+    0% {
+        border-color: #ff0000;
+        box-shadow: 0 0 50px -5px rgba(255, 0, 0, 0.6);
+    }
+    16% {
+        border-color: #ffff00;
+        box-shadow: 0 0 50px -5px rgba(255, 255, 0, 0.6);
+    }
+    33% {
+        border-color: #00ff00;
+        box-shadow: 0 0 50px -5px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        border-color: #00ffff;
+        box-shadow: 0 0 50px -5px rgba(0, 255, 255, 0.6);
+    }
+    66% {
+        border-color: #0000ff;
+        box-shadow: 0 0 50px -5px rgba(0, 0, 255, 0.6);
+    }
+    83% {
+        border-color: #ff00ff;
+        box-shadow: 0 0 50px -5px rgba(255, 0, 255, 0.6);
+    }
+    100% {
+        border-color: #ff0000;
+        box-shadow: 0 0 50px -5px rgba(255, 0, 0, 0.6);
+    }
+}
+
+@keyframes slideInSide {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    width: 400%;
+    animation: infiniteScroll 12s infinite; 
+    will-change: transform;
+}
+
+.carousel-img {
+    width: 25%; 
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+@keyframes infiniteScroll {
+     0%, 20% {
+        transform: translateX(0);
+    }
+            
+     25%, 45% {
+        transform: translateX(-25%); 
+    }
+            
+    50%, 70% {
+        transform: translateX(-50%);
+    }
+
+    75%, 100% {
+        transform: translateX(-75%);
+    }
+        }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+}
+
 
 .btn {
     display: inline-flex;
@@ -814,10 +959,19 @@ body {
     height: 300px;
 }
 
+.btn-primary,
+.btn-secondary {
+    position: relative;
+    overflow: hidden;  
+    transition: all 0.3s ease;
+    z-index: 1; 
+}
+
 .btn-primary {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
     color: var(--text-dark);
     box-shadow: 0 4px 15px var(--color-primary-shadow);
+    border: none;
 }
 
 .btn-primary:hover {
@@ -825,14 +979,10 @@ body {
     box-shadow: 0 8px 25px var(--color-primary-shadow);
 }
 
-.btn-primary:active {
-    transform: translateY(-1px);
-}
-
 .btn-secondary {
     background: transparent;
     color: var(--color-primary);
-    border-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
@@ -840,6 +990,37 @@ body {
     color: var(--text-dark);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px var(--color-primary-shadow);
+}
+
+.btn-primary::after,
+.btn-secondary::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    z-index: -1; 
+    transition: width 0.6s ease-out, height 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: scale(0.95) translateY(0); 
+    box-shadow: 0 2px 10px var(--color-primary-shadow);
+}
+
+.btn-primary:active::after,
+.btn-secondary:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    transition: 0s;
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 .btn i {
@@ -1406,7 +1587,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-xl);
     border-color: var(--color-primary);
     transition: all var(--transition-fast);
