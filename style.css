@@ -152,8 +152,8 @@ input, textarea, select {
 }
 
 :root {
-    --color-primary: #35c2e6;
-    --color-primary-hover: #52b2df;
+    --color-primary: #4595ff;
+    --color-primary-hover: #528fdf;
     --color-primary-light: rgba(0, 132, 255, 0.1);
     --color-primary-shadow: rgba(0, 140, 255, 0.3);
     --bg-primary: #0a0e27;
@@ -499,8 +499,8 @@ body {
 }
 
 @keyframes mudarCor {
-    50% { background-color: #24d3ff;  }
-    100% { background-color: #00f7ff; }
+    50% { background-color: #2495ff;  }
+    100% { background-color: #1d70cf; }
 }
 
 
@@ -823,8 +823,8 @@ body {
 }
 
 .profile-carousel-frame {
-    width: 100%;
-    max-width: 250px; 
+    width: 80%;
+    max-width: 370px; 
     display: block; 
     margin: 0 auto; 
     aspect-ratio: 1;
@@ -838,7 +838,8 @@ body {
     animation: 
     slideInSide 1s ease-out forwards,      
     float 6s ease-in-out infinite 1s,      
-    rgbCycle 3s linear infinite;           
+    rgbCycle 3s linear infinite;  
+         
 }
 
 @keyframes rgbCycle {
@@ -1046,6 +1047,7 @@ body {
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-md);
 }
 
 .stat-item::before {
@@ -1116,6 +1118,7 @@ body {
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.6s ease-out backwards;
+    box-shadow: var(--shadow-md);
 }
 
 .skill-card:nth-child(1) { animation-delay: 0.1s; }
@@ -1213,6 +1216,7 @@ body {
     border: 1px solid var(--border-color);
     transition: all var(--transition-base);
     position: relative;
+    box-shadow: var(--shadow-md);
 }
 
 .project-card:nth-child(1) {
