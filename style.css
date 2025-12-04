@@ -576,9 +576,9 @@ body {
     width: 44px;
     height: 44px;
     border-radius: var(--radius-full);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-primary);
     background: transparent;
-    color: var(--text-secondary);
+    color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -596,6 +596,7 @@ body {
 
 .icon-btn:active {
     transform: scale(0.95);
+    background-color: #ffdd44;
 }
 
 .mobile-toggle {
@@ -1580,7 +1581,8 @@ body {
 
 
 .scroll-top:active {
-    background-color: #f1f3f5;
+    transform: scale(0.95);
+    background-color: #ffdd44;
 }
 
 .card {
