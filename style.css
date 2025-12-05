@@ -223,7 +223,7 @@ input, textarea, select {
 }
 
 [data-theme="light"] {
-    --bg-primary: #ffffff;
+    --bg-primary: rgb(252, 254, 255);
     --bg-secondary: #ffffff;
     --bg-tertiary: #e9ecef;
     --bg-card: #ffffff;
@@ -644,15 +644,14 @@ body {
     align-items: center;
     font-size: var(--font-size-sm);
     font-weight: var(--font-semibold);
-    color: var(--color-primary);
+    color: rgb(0, 110, 255);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: var(--space-md);
     padding: var(--space-xs) var(--space-lg);
     background: var(--color-primary-light);
     border-radius: var(--radius-full);
-    border: 1px solid rgba(0, 217, 255, 0.2);
-    animation: glowPulse 2s ease-in-out infinite; 
+    border: 1px solid rgb(0, 110, 255); 
     min-height: 2em; 
     box-sizing: border-box;
 }
@@ -661,9 +660,9 @@ body {
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid var(--color-primary);
+    border-right: 2px solid;
+    color: rgb(126, 103, 255);
     width: 0;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     animation: 
     type-delete 6s steps(24) infinite,
     blink-caret 0.75s step-end infinite;
@@ -784,16 +783,16 @@ body {
 
 @keyframes rgbCycle {
     0% {
-        border-color: #ff0000; 
-        box-shadow: 0 0 50px -5px rgba(255, 0, 0, 0.6);
+        border-color: #00fff2; 
+        box-shadow: 0 0 50px -5px rgba(0, 174, 255, 0.6);
     }
     16% {
-        border-color: #ffff00; 
-        box-shadow: 0 0 50px -5px rgba(255, 255, 0, 0.6);
+        border-color: #008cff; 
+        box-shadow: 0 0 50px -5px rgba(0, 38, 255, 0.6);
     }
     33% {
-        border-color: #00ff00; 
-        box-shadow: 0 0 50px -5px rgba(0, 255, 0, 0.6);
+        border-color: #00eeff; 
+        box-shadow: 0 0 50px -5px rgba(0, 204, 255, 0.6);
     }
     50% {
         border-color: #00ffff;
@@ -804,12 +803,12 @@ body {
         box-shadow: 0 0 50px -5px rgba(0, 0, 255, 0.6);
     }
     83% {
-        border-color: #ff00ff;
-        box-shadow: 0 0 50px -5px rgba(255, 0, 255, 0.6);
+        border-color: #008cff;
+        box-shadow: 0 0 50px -5px rgba(0, 162, 255, 0.6);
     }
     100% {
-        border-color: #ff0000;
-        box-shadow: 0 0 50px -5px rgba(255, 0, 0, 0.6);
+        border-color: #00e1ff;
+        box-shadow: 0 0 50px -5px rgba(0, 255, 221, 0.6);
     }
 }
 
@@ -1214,7 +1213,8 @@ body {
     background: var(--bg-secondary);
     border-radius: var(--radius-2xl);
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: none;
+    cursor: pointer;
     transition: all var(--transition-base);
     position: relative;
     box-shadow: var(--shadow-md);
@@ -1423,7 +1423,7 @@ body {
 .form-input,
 .form-textarea {
     padding: var(--space-lg);
-    background: var(--bg-tertiary);
+    background: var(--bg-hover);
     border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
     color: var(--text-primary);
@@ -1468,6 +1468,7 @@ body {
     margin-bottom: var(--space-md);
     color: var(--text-primary);
     animation: fadeInUp 0.6s ease-out;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .footer-description {
@@ -1526,10 +1527,10 @@ body {
     justify-content: center;
     background: var(--bg-tertiary);
     border-radius: var(--radius-full);
-    color: var(--text-secondary);
+    color: var(--color-primary);
     font-size: var(--font-size-2xl);
     transition: all var(--transition-base);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-primary);
     animation: scaleIn 0.4s ease-out backwards;
 }
 
@@ -1548,7 +1549,7 @@ body {
 .copyright {
     padding-top: var(--space-xl);
     border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
+    color: var(--color-primary);
     font-size: var(--font-size-sm);
 }
 
@@ -1559,7 +1560,7 @@ body {
     width: 56px;
     height: 56px;
     background: var(--color-primary);
-    color: var(--text-dark);
+    color: var(--text-primary);
     border: none;
     border-radius: var(--radius-full);
     display: flex;
@@ -1576,13 +1577,14 @@ body {
 .scroll-top.show {
     opacity: 1;
     visibility: visible;
-    animation: fadeInUp 0.4s ease-out;
+    animation: fadeInUp 0.4s ease-out backwards;
 }
 
 
 .scroll-top:active {
     transform: scale(0.95);
-    background-color: #ffdd44;
+    background-color: var(--bg-card-active);
+    border: 2px solid var(--color-primary);
 }
 
 .card {
